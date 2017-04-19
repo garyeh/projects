@@ -1,0 +1,19 @@
+<h2>Cats!</h2>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Sex</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><%= @cat.name %></td>
+    <td><%= @cat.color %></td>
+    <td><%= @cat.sex %></td>
+    <td><%= @cat.description %></td>
+  </tr>
+</table>
+
+<a href='/cats/<%= @cat.id %>/edit'>Edit Cat</a>
