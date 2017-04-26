@@ -1,0 +1,24 @@
+<h2><%= @sub.title %></h2>
+
+<p><%= @sub.description %></p>
+
+<%= button_to "List of Subs", subs_url, method: :get %>
+
+<%= button_to "Edit Sub", edit_sub_url(@sub), method: :get %>
+<%= flash[:errors] %>
+
+<br>
+
+<h3>List of Posts</h3>
+
+<ul>
+  <% @sub.posts.each do |post| %>
+    <li><%= link_to post.title, post_url(post) %></li>
+    <p>Created by: <%= post.author.username %></p>
+    <br>
+  <% end %>
+</ul>
+
+<br>
+
+<%= link_to "Add Post", new_post_url %>
