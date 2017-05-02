@@ -1,0 +1,51 @@
+ul li {
+  list-style: none;
+  height: 136px;
+  width: 136px;
+  background-color: gray;
+  float: left;
+  border-style: solid;
+  border-width: 7px;
+  border-color: black;
+  font-size: 75px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 130px;
+  font-family: sans-serif;
+}
+
+ul {
+  width: 450px;
+  border-style: solid;
+  border-width: 7px;
+  border-color: black;
+  float: left;
+}
+
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
+.hover:hover {
+  background-color: yellow;
+}
+
+.white {
+  background-color: white;
+}
+
+.winner {
+  background-color: green;
+}
+
+.draw {
+  color: red;
+  background-color: white;
+}

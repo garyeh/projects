@@ -1,0 +1,45 @@
+ul li {
+  transform: translate(0px, 250px) rotate(180deg);
+  list-style: none;
+  height: 10px;
+  width: 200px;
+  background-color: black;
+  float: left;
+  font-size: 100px;
+  font-weight: bold;
+  /*text-align: center;
+  vertical-align: middle;*/
+  /*line-height: 0px;*/
+  font-family: sans-serif;
+  margin: 30px 10px;
+
+}
+
+ul {
+  height: 1000px;
+  width: 1000px;
+  float: left;
+}
+
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
+li span {
+  padding: 10px;
+  height: 50px;
+  float: left;
+  margin: 10px;
+  width: 100px;
+  display: flex;
+}
+
+.disc {
+  background-color: orange;
+}
