@@ -1,0 +1,22 @@
+.sections-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
+}
+
+.sections-nav ul {
+	display: flex;
+}
+
+.sections-nav li {
+  padding: 8px 6px;
+}
+
+.sections-nav li:last-child {
+  text-decoration: underline;
+}
+
+.sections-nav li:hover {
+	background-color: $gray;
+}
