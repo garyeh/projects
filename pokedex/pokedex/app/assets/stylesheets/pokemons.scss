@@ -1,3 +1,65 @@
 // Place all the styles related to the Pokemons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.columns {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftside {
+  width: 200px;
+}
+
+.leftside ul {
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  list-style-type: none;
+}
+
+.leftside > ul li {
+  border-top: 1px solid gray;
+  padding: 5px 0 5px 25px;
+}
+
+.leftside > ul li span {
+  text-decoration: none;
+}
+
+.rightside {
+  border: 7px solid #4d4d4d;
+  background-color: gray;
+  font-size: 20px;
+  position: 100%;
+  padding: 300px;
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  width: 500px;
+
+}
+
+#name {
+  font-size: 30px;
+}
+.imgDetail {
+  width: 500px;
+  padding: 20px;
+  margin-top: -300px;
+}
+
+.imageBox {
+
+}
+
+.imageBox img {
+  width: 100px;
+}
+
+.pokeItem > ul li {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px;
+}
