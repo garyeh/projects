@@ -30,5 +30,5 @@ export const login = (user) => dispatch => {
 
 export const logout = () => dispatch => {
   return SessionUtil.logout()
-    .then(res => dispatch(receiveCurrentUser(res)));
+    .then(res => dispatch(receiveCurrentUser(null)));
 };
