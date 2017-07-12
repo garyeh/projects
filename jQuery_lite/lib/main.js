@@ -2,9 +2,9 @@ const DOMNodeCollection = require('./dom_node_collection');
 
 let queue = [];
 
-window.$l = function(arg){
+window.$l = function(arg) {
   let elements;
-  if(typeof arg === 'string'){
+  if (typeof arg === 'string') {
     let elementList = document.querySelectorAll(arg);
     elements =  Array.from(elementList);
   } else if (arg instanceof HTMLElement) {
@@ -16,7 +16,7 @@ window.$l = function(arg){
   return new DOMNodeCollection(elements);
 };
 
-window.$l.extend = function (...objs){
+window.$l.extend = function (...objs) {
   let merged = objs[0];
   for (let i = 1; i < objs.length; i++) {
     let keys = Object.keys(objs[i]);
@@ -26,8 +26,8 @@ window.$l.extend = function (...objs){
   }
   return merged;
 };
-//type, url, success, error, data, datatype
-window.$l.ajax = function(options){
+
+window.$l.ajax = function(options) {
   let defaults = {
     type: 'GET',
     url: './',
@@ -36,8 +36,7 @@ window.$l.ajax = function(options){
     success: () => {},
     error: () => {}
   };
-  // console.log(defaults);
-  // console.log(options);
+
   window.$l.extend(defaults, options);
   console.log(options);
   console.log(defaults);

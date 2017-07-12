@@ -4,8 +4,8 @@ class DOMNodeCollection {
     this.empty = this.empty.bind(this);
   }
 
-  html (string){
-    if(string){
+  html(string) {
+    if (string) {
       this.elements.forEach((el) => {
         el.innerHTML = string;
       });
@@ -15,13 +15,13 @@ class DOMNodeCollection {
     }
   }
 
-  empty(){
-    this.elements.forEach((el) => {
+  empty() {
+    this.elements.forEach( (el) => {
       el.innerHTML = "";
     });
   }
 
-  append(something){
+  append(something) {
     this.elements.forEach( (el) => {
       if (typeof something === "string") {
         el.innerHTML += something;
@@ -35,7 +35,7 @@ class DOMNodeCollection {
     });
   }
 
-  attr(attributeName, value){
+  attr(attributeName, value) {
     if (value) {
       this.elements.forEach((el) => {
         el[attributeName] = value;
@@ -45,19 +45,19 @@ class DOMNodeCollection {
     }
   }
 
-  addClass(newClass){
+  addClass(newClass) {
     this.elements.forEach((el) => {
       el.setAttribute("class", newClass);
     });
   }
 
-  removeClass(oldClass){
+  removeClass(oldClass) {
     this.elements.forEach((el) => {
       el.classList.remove(oldClass);
     });
   }
 
-  children(){
+  children() {
     let kids = [];
     this.elements.forEach((el) => {
       kids = kids.concat(el.children);
@@ -65,7 +65,7 @@ class DOMNodeCollection {
     return new DOMNodeCollection(kids);
   }
 
-  parent(){
+  parent() {
     let parents = [];
     this.elements.forEach((el) => {
       if (!parents.includes(el.parentNode)) {
@@ -75,7 +75,7 @@ class DOMNodeCollection {
     return new DOMNodeCollection(parents);
   }
 
-  find(selector){
+  find(selector) {
     let found = [];
     this.elements.forEach((el) => {
       found = found.concat(el.querySelectorAll(selector));
@@ -83,21 +83,21 @@ class DOMNodeCollection {
     return new DOMNodeCollection(found);
   }
 
-  remove(){
+  remove() {
     this.empty();
     this.elements.forEach((el) => {
       el.parentNode.removeChild(el);
     });
   }
 
-  on(ev, callback){
+  on(ev, callback) {
     this.elements.forEach((el) => {
       el.addEventListener(ev, callback);
-      el.cb =  callback;
+      el.cb = callback;
     });
   }
 
-  off(ev){
+  off(ev) {
     this.elements.forEach((el) => {
       console.log(el.cb);
       el.removeEventListener(ev, el.cb);
