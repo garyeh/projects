@@ -7,5 +7,11 @@ import Autocomplete from './autocomplete';
 document.addEventListener("DOMContentLoaded", () => {
 	const root = document.getElementById("root");
 	const names = ['gary','david'];
-	ReactDOM.render(<div><Clock /><Weather /><Autocomplete names={names} /></div>, root);
+	ReactDOM.render(
+		<div>
+			<Clock />
+			<Weather />
+			<Autocomplete names={names} />
+		</div>
+		, root);
 });
