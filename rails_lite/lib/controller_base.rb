@@ -101,14 +101,6 @@ class ControllerBase
     @token
   end
 
-  protected
-
-  def self.protect_from_forgery
-    @@protect_from_forgery = true
-  end
-
-  private
-
   # method exposing a `Session` object
   def session
     @session ||= Session.new(@req)
@@ -119,6 +111,14 @@ class ControllerBase
     send(name)
     render(name) unless @already_built_response
   end
+
+  protected
+
+  def self.protect_from_forgery
+    @@protect_from_forgery = true
+  end
+
+  private
 
   attr_accessor :already_built_response
 
