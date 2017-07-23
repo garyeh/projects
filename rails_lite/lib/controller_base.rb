@@ -101,17 +101,6 @@ class ControllerBase
     @token
   end
 
-  # method exposing a `Session` object
-  def session
-    @session ||= Session.new(@req)
-  end
-
-  # use this with the router to call action_name (:index, :show, :create...)
-  def invoke_action(name)
-    send(name)
-    render(name) unless @already_built_response
-  end
-
   protected
 
   def self.protect_from_forgery
