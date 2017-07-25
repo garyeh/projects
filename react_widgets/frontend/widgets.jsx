@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		<div>
 			<Clock />
 			<Weather />
-			<Autocomplete names={names} />
+			<div className="interactive">
+				<Autocomplete names={names} />
+			</div>
 		</div>
 		, root);
 });

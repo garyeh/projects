@@ -10,7 +10,7 @@
 }
 
 .clock .contents {
-  border: 1px solid black;
+  border: 2px solid black;
   background: orange;
   padding: 10px;
   color: white;
@@ -41,7 +41,7 @@
 }
 
 .weather .contents {
-  border: 1px solid black;
+  border: 2px solid black;
   background: green;
   padding: 10px;
   color: white;
@@ -56,4 +56,16 @@
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
   font-weight: 700;
+}
+
+.interactive {
+  width: 500px;
+  margin: 50px;
+}
+
+.auto {
+  border: 2px solid black;
+  width: 40%;
+  background: violet;
+  padding: 25px;
 }
