@@ -6,7 +6,7 @@ import Autocomplete from './autocomplete';
 
 document.addEventListener("DOMContentLoaded", () => {
 	const root = document.getElementById("root");
-	const names = ['gary','david'];
+	const names = ['gary','david','jules','aaron','elliot'];
 	ReactDOM.render(
 		<div>
 			<Clock />

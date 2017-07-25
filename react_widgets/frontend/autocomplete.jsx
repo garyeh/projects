@@ -3,29 +3,60 @@ import React from 'react';
 class Autocomplete extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { inputVal: "" };
+    this.state = {
+      inputVal: ''
+    };
+    this.selectName = this.selectName.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }
 
-  handleInput(e) {
-    this.setState({ inputVal: e.currentTarget.value });
+  handleInput(event) {
+    this.setState({inputVal: event.currentTarget.value});
   }
 
-  clickUpdate(e) {
-    this.setState({ inputVal: e.currentTarget.innerText })
+  matches() {
+    const matches = [];
+    if (this.state.inputVal.length === 0) {
+      return this.props.names;
+    }
+
+    this.props.names.forEach(name => {
+      let sub = name.slice(0, this.state.inputVal.length);
+      if (sub.toLowerCase() === this.state.inputVal.toLowerCase()) {
+        matches.push(name);
+      }
+    });
+
+    if (matches.length === 0) {
+      matches.push('No matches');
+    }
+
+    return matches;
+  }
+
+  selectName(event) {
+    let name = event.currentTarget.innerText;
+    this.setState({inputVal: name});
   }
 
   render() {
-    let nameTags = this.props.names.map((name) => (
-      <li onClick={this.clickUpdate.bind(this)} key={name}>{name}</li>
-    ));
-
-    return (
+    let results = this.matches().map((result, i) => {
+      return (
+        <li key={i} onClick={this.selectName}>{result}</li>
+      );
+    });
+    return(
       <div>
-        <input onInput={this.handleInput} type="text" value={this.state.inputVal}></input>
-        <ul>
-          {nameTags}
-        </ul>
+        <label className='autoLabel'>Autocomplete</label>
+        <div className='auto'>
+          <input
+            onChange={this.handleInput}
+            value={this.state.inputVal}
+            placeholder='Search...'/>
+          <ul>
+            {results}
+          </ul>
+        </div>
       </div>
     );
   }
