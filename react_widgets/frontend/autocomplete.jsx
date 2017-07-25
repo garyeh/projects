@@ -3,25 +3,26 @@ import React from 'react';
 class Autocomplete extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { names: props.names, inputVal: "" };
+    this.state = { inputVal: "" };
+    this.handleInput = this.handleInput.bind(this);
   }
 
-  updateInputVal (e) {
-    this.setState({ inputVal: e.target.value });
+  handleInput(e) {
+    this.setState({ inputVal: e.currentTarget.value });
   }
 
   clickUpdate(e) {
-    this.setState({ inputVal: e.target.innerText })
+    this.setState({ inputVal: e.currentTarget.innerText })
   }
 
-  render () {
-    let nameTags = this.state.names.map((name) => (
+  render() {
+    let nameTags = this.props.names.map((name) => (
       <li onClick={this.clickUpdate.bind(this)} key={name}>{name}</li>
     ));
 
     return (
       <div>
-        <input onInput={this.updateInputVal.bind(this)} type="text" value={this.state.inputVal}></input>
+        <input onInput={this.handleInput} type="text" value={this.state.inputVal}></input>
         <ul>
           {nameTags}
         </ul>

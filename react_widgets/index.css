@@ -6,6 +6,7 @@
 .clockLabel {
   font-family: 'Roboto', sans-serif;
   font-size: 25px;
+  font-weight: 700;
 }
 
 .clock .contents {
@@ -32,9 +33,11 @@
 }
 
 .weather {
+  font-family: 'Roboto', sans-serif;
   margin: 50px;
   width: 500px;
   font-size: 25px;
+  font-weight: 700;
 }
 
 .weather .contents {
@@ -42,7 +45,6 @@
   background: green;
   padding: 10px;
   color: white;
-  font-weight: bold;
 }
 
 .weather p {

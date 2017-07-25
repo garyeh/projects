@@ -23,12 +23,12 @@ class Weather extends React.Component {
           this.setState({ weather: temp + ' degrees' });
           this.setState({ location: JSON.parse(request.responseText).name });
         } else {
-          this.setState({ weather: "Error retrieving weather!"});
+          this.setState({ weather: "Error retrieving weather!" });
         }
       };
 
       request.onerror = function() {
-        this.setState({ weather: "Error retrieving weather!"});
+        this.setState({ weather: "Error retrieving weather!" });
       };
 
       request.send();
