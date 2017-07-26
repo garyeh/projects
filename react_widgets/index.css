@@ -19,7 +19,7 @@
 
 .clock {
   margin: 50px;
-  width: 500px;
+  width: 600px;
   font-size: 25px;
 }
 
@@ -35,16 +35,15 @@
 .weather {
   font-family: 'Roboto', sans-serif;
   margin: 50px;
-  width: 500px;
+  width: 600px;
   font-size: 25px;
   font-weight: 700;
 }
 
 .weather .contents {
   border: 2px solid black;
-  background: green;
+  background: lightgreen;
   padding: 10px;
-  color: white;
 }
 
 .weather p {
@@ -53,7 +52,7 @@
 }
 
 .interactive {
-  width: 500px;
+  width: 600px;
   margin: 50px;
   display: flex;
   justify-content: space-between;
@@ -66,7 +65,8 @@
   border: 2px solid black;
   background: violet;
   padding: 20px;
-  margin-right: 25px;
+  height: 100%;
+  width: 225px;
 }
 
 .auto > * {
@@ -76,4 +76,13 @@
 .auto > ul {
   color: white;
   font-family: 'Open Sans', sans-serif;
+}
+
+.tabs {
+  background: lightblue;
+  border: 2px solid black;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  width: 225px;
 }

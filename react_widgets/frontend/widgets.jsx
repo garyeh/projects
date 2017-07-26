@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			<Clock />
 			<Weather />
 			<div className="interactive">
-				<Autocomplete names={names} />
 				<Tabs panes={panes} />
+				<Autocomplete names={names} />
 			</div>
 		</div>
 		, root);
