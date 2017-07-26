@@ -55,5 +55,3 @@ class Weather extends React.Component {
 }
 
 export default Weather;
-
-//5515b6f98c81335511f884aa28e405e6
