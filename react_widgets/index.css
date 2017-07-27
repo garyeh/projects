@@ -86,3 +86,7 @@
   color: white;
   width: 225px;
 }
+
+.active {
+  font-weight: bold;
+}
