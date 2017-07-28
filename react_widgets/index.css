@@ -53,6 +53,7 @@
 
 .interactive {
   width: 600px;
+  height: 200px;
   margin: 50px;
   display: flex;
   justify-content: space-between;
@@ -65,7 +66,7 @@
   border: 2px solid black;
   background: violet;
   padding: 20px;
-  height: 100%;
+  height: 180px;
   width: 225px;
 }
 
@@ -79,14 +80,39 @@
 }
 
 .tabs {
-  background: lightblue;
-  border: 2px solid black;
   height: 100%;
-  padding: 20px;
   color: white;
-  width: 225px;
+  width: 204px;
 }
 
 .active {
   font-weight: bold;
+}
+
+.tab-header{
+  width: 205px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.tab-header > li{
+  width: 65px;
+  border: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.tab-content {
+  background: lightblue;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 20px;
+  height: 150px;
 }
