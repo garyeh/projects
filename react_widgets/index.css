@@ -90,7 +90,7 @@
 }
 
 .tab-header{
-  width: 205px;
+  width: 204px;
   height: 30px;
   display: flex;
   justify-content: space-between;
@@ -102,7 +102,7 @@
   border: 2px solid black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding-top: 4px;
+  padding-top: 2px;
   text-align: center;
   cursor: pointer;
   background-color: lightblue;
