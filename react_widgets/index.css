@@ -82,7 +82,7 @@
 .tabs {
   height: 100%;
   color: white;
-  width: 204px;
+  width: 240px;
 }
 
 .active {
@@ -90,15 +90,15 @@
 }
 
 .tab-header{
-  width: 204px;
+  width: 240px;
   height: 30px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
-.tab-header > li{
-  width: 65px;
+.tab-header > li {
+  width: 80px;
   border: 2px solid black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
