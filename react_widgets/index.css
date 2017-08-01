@@ -1,10 +1,10 @@
 #root {
   display: flex;
   justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-.clockLabel, .autoLabel, .tabLabel {
-  font-family: 'Roboto', sans-serif;
+.clockLabel, .autoLabel, .tabLabel, .weatherLabel {
   font-size: 25px;
   font-weight: 700;
 }
@@ -17,27 +17,15 @@
   font-weight: bold;
 }
 
-.clock {
+.clock, .weather {
   margin: 50px;
   width: 600px;
   font-size: 25px;
-}
-
-.clock p {
-  font-family: 'Roboto', sans-serif;
 }
 
 .clock li {
   display: flex;
   justify-content: space-between;
-}
-
-.weather {
-  font-family: 'Roboto', sans-serif;
-  margin: 50px;
-  width: 600px;
-  font-size: 25px;
-  font-weight: 700;
 }
 
 .weather .contents {

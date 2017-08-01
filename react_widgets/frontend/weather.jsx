@@ -38,7 +38,7 @@ class Weather extends React.Component {
   render() {
     return(
       <section className="weather">
-        <label>
+        <label className="weatherLabel">
           Weather
         </label>
         <div className="contents">
