@@ -74,10 +74,11 @@
 }
 
 .active {
-  font-weight: bold;
+  font-weight: 900;
+  text-shadow: 2px 2px #63b4cf;
 }
 
-.tab-header{
+.tab-header {
   width: 240px;
   height: 30px;
   display: flex;
